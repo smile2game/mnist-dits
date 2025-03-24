@@ -1,0 +1,1 @@
+nohup deepspeed ds-train.py > train.log 2>&1 &

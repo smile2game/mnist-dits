@@ -51,12 +51,12 @@ class DiTBlock(nn.Module):
 
         # attention
         q=self.wq(y)    # (batch,seq_len,nhead*emb_size)
-        k=self.wk(y)    # (batch,seq_len,nhead*emb_size)    
+        k=self.wk(y)    # (batch,seq_len,nhead*emb_size)        
         v=self.wv(y)    # (batch,seq_len,nhead*emb_size)
         q=q.view(q.size(0),q.size(1),self.nhead,self.emb_size).permute(0,2,1,3) # (batch,nhead,seq_len,emb_size)
         k=k.view(k.size(0),k.size(1),self.nhead,self.emb_size).permute(0,2,3,1) # (batch,nhead,emb_size,seq_len)
         v=v.view(v.size(0),v.size(1),self.nhead,self.emb_size).permute(0,2,1,3) # (batch,nhead,seq_len,emb_size)
-        attn=q@k/math.sqrt(q.size(2))   # (batch,nhead,seq_len,seq_len)
+        attn=q@k/math.sqrt(q.size(2))   # (batch,nhead,seq_len,seq_len) #这里 应该改成 attn=q@k/math.sqrt(q.size(-1))
         attn=torch.softmax(attn,dim=-1)   # (batch,nhead,seq_len,seq_len)
         y=attn@v    # (batch,nhead,seq_len,emb_size)
         y=y.permute(0,2,1,3) # (batch,seq_len,nhead,emb_size)

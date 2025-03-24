@@ -1,0 +1,7 @@
+{"time":"2025-03-24T15:56:57.050876443+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/home/xdhpc/dits/mnist-dits/wandb/run-20250324_155657-rfwodtu1/logs/debug-core.log"}
+{"time":"2025-03-24T15:56:57.15923987+08:00","level":"INFO","msg":"created new stream","id":"rfwodtu1"}
+{"time":"2025-03-24T15:56:57.159294368+08:00","level":"INFO","msg":"stream: started","id":"rfwodtu1"}
+{"time":"2025-03-24T15:56:57.159353113+08:00","level":"INFO","msg":"handler: started","stream_id":"rfwodtu1"}
+{"time":"2025-03-24T15:56:57.159356679+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"rfwodtu1"}
+{"time":"2025-03-24T15:56:57.159402715+08:00","level":"INFO","msg":"sender: started","stream_id":"rfwodtu1"}
+{"time":"2025-03-24T15:56:57.873427763+08:00","level":"INFO","msg":"Starting system monitor"}

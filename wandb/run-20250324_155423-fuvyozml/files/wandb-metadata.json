@@ -1,0 +1,51 @@
+{
+  "os": "Linux-6.8.0-40-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.10.16",
+  "startedAt": "2025-03-24T07:54:23.907072Z",
+  "args": [
+    "--local_rank=0"
+  ],
+  "program": "/home/xdhpc/dits/mnist-dits/ds-train.py",
+  "codePath": "ds-train.py",
+  "git": {
+    "remote": "https://ghfast.top/https://github.com/smile2game/mnist-dits.git",
+    "commit": "1de158fdad282fe8a8567f9043163243dc617227"
+  },
+  "email": "2426827419@qq.com",
+  "root": "/home/xdhpc/dits/mnist-dits",
+  "host": "xdhpc-HP-Z640-Workstation",
+  "executable": "/home/xdhpc/miniconda3/envs/dits/bin/python",
+  "codePathLocal": "ds-train.py",
+  "cpu_count": 8,
+  "cpu_count_logical": 8,
+  "gpu": "NVIDIA GeForce RTX 2080 Ti",
+  "gpu_count": 2,
+  "disk": {
+    "/": {
+      "total": "200449576960",
+      "used": "46417117184"
+    }
+  },
+  "memory": {
+    "total": "50426859520"
+  },
+  "cpu": {
+    "count": 8,
+    "countLogical": 8
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 2080 Ti",
+      "memoryTotal": "11811160064",
+      "cudaCores": 4352,
+      "architecture": "Turing"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 2080 Ti",
+      "memoryTotal": "11811160064",
+      "cudaCores": 4352,
+      "architecture": "Turing"
+    }
+  ],
+  "cudaVersion": "12.4"
+}

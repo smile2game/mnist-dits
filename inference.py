@@ -64,4 +64,6 @@ for b in range(batch_size):
         final_img=final_img.permute(1,2,0)
         plt.subplot(batch_size,num_imgs,b*num_imgs+i+1)
         plt.imshow(final_img)
-plt.show()
+# plt.show()
+plt.savefig('infer.png',bbox_inches = 'tight')
+plt.close()

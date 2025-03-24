@@ -8,7 +8,7 @@ class MNIST(Dataset):
         super().__init__()
         self.ds=torchvision.datasets.MNIST('./mnist/',train=is_train,download=True)
         self.img_convert=Compose([
-            PILToTensor(),
+            PILToTensor(), #python Image Library >> Tensor
         ])
         
     def __len__(self):

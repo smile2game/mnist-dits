@@ -1,0 +1,21 @@
+Epochs:   0%|                                                                                                                   | 0/500 [00:00<?, ?it/s]/home/xdhpc/miniconda3/envs/dits/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 10 worker processes in total. Our suggested max number of worker in current system is 8, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Epochs:   3%|██▋                                                                                                     | 13/500 [01:59<1:14:18,  9.15s/it]
+Traceback (most recent call last):
+epoch:0 iter:0,loss:0.1646624356508255,save!
+epoch=0,cost time 9.51201868057251s
+epoch=1,cost time 8.371276140213013s
+epoch=2,cost time 8.363584280014038s
+epoch=3,cost time 8.346801280975342s
+epoch=4,cost time 8.415545225143433s
+epoch=5,cost time 8.67530870437622s
+epoch=6,cost time 8.958656549453735s
+epoch=7,cost time 8.390631198883057s
+epoch=8,cost time 8.445308208465576s
+epoch=9,cost time 8.356951475143433s
+epoch=10,cost time 8.395395040512085s
+epoch=11,cost time 8.383763790130615s
+epoch=12,cost time 8.556660652160645s
+  File "/home/xdhpc/dits/mnist-dits/ds-train.py", line 70, in <module>
+    loss=loss_fn(pred_noise,noise.to(DEVICE))
+KeyboardInterrupt

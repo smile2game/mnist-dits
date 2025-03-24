@@ -1,0 +1,10 @@
+{"time":"2025-03-24T15:54:23.62190042+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/home/xdhpc/dits/mnist-dits/wandb/run-20250324_155423-az9sw466/logs/debug-core.log"}
+{"time":"2025-03-24T15:54:23.730210407+08:00","level":"INFO","msg":"created new stream","id":"az9sw466"}
+{"time":"2025-03-24T15:54:23.730261275+08:00","level":"INFO","msg":"stream: started","id":"az9sw466"}
+{"time":"2025-03-24T15:54:23.730279966+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"az9sw466"}
+{"time":"2025-03-24T15:54:23.730307835+08:00","level":"INFO","msg":"sender: started","stream_id":"az9sw466"}
+{"time":"2025-03-24T15:54:23.730320554+08:00","level":"INFO","msg":"handler: started","stream_id":"az9sw466"}
+{"time":"2025-03-24T15:54:24.469994924+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-24T15:56:23.743600297+08:00","level":"INFO","msg":"stream: closing","id":"az9sw466"}
+{"time":"2025-03-24T15:56:23.743641618+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-24T15:56:23.744556149+08:00","level":"INFO","msg":"Stopped system monitor"}

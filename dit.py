@@ -8,14 +8,16 @@ class DiT(nn.Module):
     def __init__(self,img_size,patch_size,channel,emb_size,label_num,dit_num,head):
         super().__init__()
         
-        self.patch_size=patch_size
-        self.patch_count=img_size//self.patch_size
+        self.patch_size=patch_size 
+        print(f"self.patch_size is {self.patch_size}")
+        self.patch_count=img_size//self.patch_size 
         self.channel=channel
         
         # patchify
-        self.conv=nn.Conv2d(in_channels=channel,out_channels=channel*patch_size**2,kernel_size=patch_size,padding=0,stride=patch_size) 
-        self.patch_emb=nn.Linear(in_features=channel*patch_size**2,out_features=emb_size) 
-        self.patch_pos_emb=nn.Parameter(torch.rand(1,self.patch_count**2,emb_size))
+        self.conv=nn.Conv2d(in_channels=channel,out_channels=channel*patch_size**2,kernel_size=patch_size,padding=0,stride=patch_size) #NCHW >> C = channel x patch_size^2 = 16
+        print(f"self.conv is {self.conv}")
+        self.patch_emb=nn.Linear(in_features=channel*patch_size**2,out_features=emb_size) #emb_size = 64
+        self.patch_pos_emb=nn.Parameter(torch.rand(1,self.patch_count**2,emb_size)) #创建可训练参数
         
         # time emb
         self.time_emb=nn.Sequential(
@@ -27,6 +29,7 @@ class DiT(nn.Module):
 
         # label emb
         self.label_emb=nn.Embedding(num_embeddings=label_num,embedding_dim=emb_size)
+        
         
         # DiT Blocks
         self.dits=nn.ModuleList()
@@ -44,7 +47,7 @@ class DiT(nn.Module):
         y_emb=self.label_emb(y) #   (batch,emb_size)
         # time emb
         t_emb=self.time_emb(t)  #   (batch,emb_size)
-        
+         
         # condition emb
         cond=y_emb+t_emb
         
